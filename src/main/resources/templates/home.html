@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+<h5>Home page.</h5>
+<p th:text="${todayDate}"></p>
+<br>
+<table>
+    <tr th:each="person:${persons}">
+        <td th:text="${person.name}"></td>
+        <td th:text="${person.username}"></td>
+        <td th:text="${person.id}"></td>
+        <td th:text="${person.address}"></td>
+        <td><a th:href="@{filledUserForm(idFromView=${person.id})}">Detail</a></td>
+        <td><a th:href="@{deleteUser(idFromView=${person.id})}">Delete</a></td>
+        <td><a th:href="@{getUserFormToUpdate(idFromView=${person.id})}">Update</a></td>
+
+    </tr>
+
+</table>
+
+  <a th:href="@{/createUser}">Create new User</a>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Add User</title>
+</head>
+<body>
+<h6>Fill the blanks to create a New User</h6>
+<form th:object="${person}"
+      th:action="@{/addPerson}"
+      method="post">
+  <p>
+  <label for="name">Name:</label>
+  <input type="text" name="name" id="name" th:field="*{name}"></p>
+  <p>
+  <label for="username">Username:</label>
+  <input type="text" name="username" id="username" th:field="*{username}"></p>
+  <p>
+  <label for="documentId">Document Id:</label>
+  <input type="text" name="documentId" id="documentId" th:field="*{documentId}"></p>
+  <p>
+  <label for="address">Address:</label>
+  <input type="text" name="address" id="address" th:field="*{address}"></p>
+
+  <button type="submit">Send</button>
+</form>
+
+</body>
+</html>
