@@ -1,4 +1,4 @@
-package com.example.carsProject.entity;
+package com.example.carsProject.model;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

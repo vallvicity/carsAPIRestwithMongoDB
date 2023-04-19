@@ -1,6 +1,6 @@
 package com.example.carsProject.controller;
 
-import com.example.carsProject.entity.Person;
+import com.example.carsProject.model.Person;
 import com.example.carsProject.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -30,7 +30,7 @@ public class PersonController {
 
     @RequestMapping("/filledUserForm")
     public String returnUserForm(@RequestParam("idFromView") String id, Model model){
-        Person person = personService.getClientByKey(id);
+        Person person = personService.getClientById(id);
         model.addAttribute("person", person);
         return "filledUserForm";
 
@@ -45,7 +45,7 @@ public class PersonController {
     @RequestMapping("/getUserFormToUpdate")
     public String personUpdate(@RequestParam("idFromView") String id, Model model) {
 
-        Person personFound = personService.getClientByKey(id);
+        Person personFound = personService.getClientById(id);
 
         if(personFound != null){
             model.addAttribute("userIdFromView", id);
