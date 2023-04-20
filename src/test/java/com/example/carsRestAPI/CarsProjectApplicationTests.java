@@ -1,4 +1,4 @@
-package com.example.carsProject;
+package com.example.carsRestAPI;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

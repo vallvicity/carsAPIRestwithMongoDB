@@ -1,4 +1,5 @@
-package com.example.carsProject.model;
+package com.example.carsRestAPI.model;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

@@ -1,8 +1,8 @@
-package com.example.carsProject.service;
+package com.example.carsRestAPI.service;
 
 
-import com.example.carsProject.model.Person;
-import com.example.carsProject.repository.PersonRepository;
+import com.example.carsRestAPI.model.Person;
+import com.example.carsRestAPI.repository.PersonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,9 +19,9 @@ public class PersonService {
         return personRepository.getClientByKey(id);
     }
 
-    public void updateClient(String id, Person person) {
+    public Person updateClient(String id, Person person) {
 
-        personRepository.updateClient( id, person);
+        return personRepository.updateClient( id, person);
     }
 
     public void deleteClient(String id) {

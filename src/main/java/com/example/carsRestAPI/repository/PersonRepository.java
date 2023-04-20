@@ -1,7 +1,7 @@
-package com.example.carsProject.repository;
+package com.example.carsRestAPI.repository;
 
-import com.example.carsProject.Utils.Utils;
-import com.example.carsProject.model.Person;
+import com.example.carsRestAPI.Utils.Utils;
+import com.example.carsRestAPI.model.Person;
 import org.springframework.stereotype.Repository;
 
 import java.util.Collection;
@@ -17,9 +17,9 @@ public class PersonRepository {
         return clientList.get(key);
     }
 
-    public void updateClient(String id, Person person) {
+    public Person updateClient(String id, Person person) {
 
-        clientList.put( id, person);
+       return clientList.put( id, person);
     }
 
     public void deleteClient(String id) {

@@ -1,4 +1,4 @@
-package com.example.carsProject.Utils;
+package com.example.carsRestAPI.Utils;
 
 import java.util.UUID;
 
