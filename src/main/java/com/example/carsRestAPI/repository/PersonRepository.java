@@ -18,8 +18,8 @@ public class PersonRepository {
     }
 
     public Person updateClient(String id, Person person) {
-
-       return clientList.put( id, person);
+        person.setId(id);
+        return clientList.put( id, person);
     }
 
     public void deleteClient(String id) {

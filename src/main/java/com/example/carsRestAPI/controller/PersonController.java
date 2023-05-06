@@ -14,20 +14,10 @@ public class PersonController {
     @Autowired
     PersonService personService = new PersonService();
 
-    //No need for API
-    /*@GetMapping("/createUser")
-    public String createPerson(Model model) {
-         model.addAttribute("person", new Person());
-
-        return "newUserForm";
-    }*/
-
     @PostMapping(value = "/addPerson", consumes = "application/json")
     public Person addPerson(@RequestBody Person person) {
 
         Person personCreated = personService.addPerson(person);
-        // Don't need this in API
-//        model.addAttribute("person", personCreated);
 
         return personCreated;
     }
